@@ -17,7 +17,7 @@ def is_valid_word(word, letter_side):
 dictionary = [word for word in dictionary if is_valid_word(word, letter_side)]
 print("Number of possible words:", len(dictionary))
 
-solutions = set()
+solutions = []
 
 dictionary.sort(key=lambda x: len(letters.intersection(x))+1/len(x), reverse=True)
 
@@ -27,9 +27,8 @@ for i, word1 in enumerate(dictionary):
     current_dictionary.sort(key=lambda x: len(current_letters.intersection(x))+1/len(x), reverse=True)
     for word2 in current_dictionary:
         if len(current_letters.difference(word2)) == 0:
-            solutions.add((word1,word2))
+            solutions.append((word1,word2))
 
-solutions = list(solutions)
 print(f"Number of 2-word solutions: {len(solutions)}")
 solutions.sort(key=lambda x: len(''.join(x)))
 print("Solutions:")
