@@ -1,4 +1,4 @@
-# Letter Boxed Solver
+# NYT Letter Boxed Solver
 A simple Python solver that finds all 2-word solutions for the game Letter Boxed, and ranks them by the least amount of used letters.
 
 `combine.py` is a file that combines the words from the files `dictionary.txt` and `dictionary2.txt`. The latter is the main dictionary used by the solver, while the former is a new wordlist that includes new words. This is because the dictionary is not yet complete and may need to be updated.
