@@ -19,12 +19,9 @@ print("Number of possible words:", len(dictionary))
 
 solutions = []
 
-dictionary.sort(key=lambda x: len(letters.intersection(x))+1/len(x), reverse=True)
-
 for i, word1 in enumerate(dictionary):
     current_letters = letters.difference(word1)
     current_dictionary = [x for x in dictionary if x[0] == word1[-1]]
-    current_dictionary.sort(key=lambda x: len(current_letters.intersection(x))+1/len(x), reverse=True)
     for word2 in current_dictionary:
         if len(current_letters.difference(word2)) == 0:
             solutions.append((word1,word2))
