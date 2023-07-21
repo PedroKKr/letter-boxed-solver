@@ -1,4 +1,4 @@
-// This code was created was created by GPT-4
+// This code was created by GPT-4
 
 // get gameData.dictionary list
 let list = window.gameData.dictionary;
