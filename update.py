@@ -53,4 +53,4 @@ print("Solutions:")
 for x in solutions:
     print(len(''.join(x)),', '.join(x),'<ORDER INVARIANT>' if x[0][-1] == x[1][0] and x[1][-1] == x[0][0] else '')
 
-input("\nPressione ENTER para fechar")
+input("\nPress ENTER to close")
