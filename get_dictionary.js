@@ -23,7 +23,7 @@ downloadLink.href = url;
 downloadLink.target="_blank";
 
 // set the download link text
-downloadLink.download = "gameData.txt";
+downloadLink.download = "dictionary2.txt";
 
 // append the link to document body
 document.body.appendChild(downloadLink);
