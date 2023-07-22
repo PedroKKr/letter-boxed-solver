@@ -7,6 +7,8 @@ A simple Python solver that finds all 2-word solutions for the game Letter Boxed
 
 To get the sides of the square for the current game, enter `window.gameData.sides` in the browser console.
 
+To automatically get today's solutions and also update `dictionary.txt` simply use `update.py`
+
 ### Example output
 (The numbers on the left of the solutions are the number of letters used)
 ```
