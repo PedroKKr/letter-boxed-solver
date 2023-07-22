@@ -21,28 +21,16 @@ with open('dictionary.txt','w') as f:
 sides = gameData['sides']
 letters = frozenset(''.join(sides))
 
-letter_side = {}
-for i,side in enumerate(sides):
-    for letter in side:
-        letter_side[letter] = i
-
-def is_valid_word(word, letter_side):
-    for letter1, letter2 in zip(word,word[1:]):
-        if letter1 not in letter_side or letter2 not in letter_side or letter_side[letter1] == letter_side[letter2]:
-            return False
-    return True
-
-dictionary = [word for word in dictionary if is_valid_word(word, letter_side)]
-print("Number of possible words:", len(dictionary))
+print("Number of possible words:", len(dictionary2))
 
 solutions = []
 
-for i, word1 in enumerate(dictionary):
+for i, word1 in enumerate(dictionary2):
     current_letters = letters.difference(word1)
     if len(current_letters) == 0:
         solutions.append(word1)
     else:
-        current_dictionary = [x for x in dictionary if x[0] == word1[-1]]
+        current_dictionary = [x for x in dictionary2 if x[0] == word1[-1]]
         for word2 in current_dictionary:
             if len(current_letters.difference(word2)) == 0:
                 solutions.append((word1,word2))
